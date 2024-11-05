@@ -41,6 +41,12 @@ html {
     margin-right: 10px;
 }
 
+.header_menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
 .header_menu a {
     text-decoration: none;
     color: black;
@@ -84,6 +90,7 @@ html {
     color: black;
 }
 
+/* Social Icons */
 .social-icons {
     display: grid;
     grid-template-rows: repeat(5, 50px);
@@ -336,12 +343,14 @@ html {
     padding: 20px;
 }
 
+/* Hamburger Menu */
 .hamburger {
     display: none;
     font-size: 2em;
     cursor: pointer;
 }
 
+/* Project Section (Project 1 specific) */
 .project_one {
     display: block;
     margin: 30px;
@@ -397,7 +406,6 @@ html {
 
 /* Media Queries for max-width: 576px (Mobile devices) */
 @media (max-width: 576px) {
-
     /* Header */
     .header {
         flex-direction: column;
@@ -406,16 +414,4 @@ html {
     }
 
     .header_name {
-        font-size: 1.2rem;
-        justify-content: center;
-    }
-
-    .header_menu a {
-        font-size: 1rem;
-        margin: 5px;
-        display: none; /* Hidden on mobile for simplicity */
-    }
-
-    .hamburger {
-        display: block;
-        margin-left:
+        font
