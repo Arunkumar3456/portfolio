@@ -7,16 +7,14 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family:Verdana, sans-serif;
 }
 
-body {
+.parent {
     width: 100%;
     height: 100%;
-    margin: 0;
 }
 
-/* HEADER */
 .header {
     height: 15vh;
     display: flex;
@@ -26,7 +24,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0 20px;
+    
 }
 
 .header_name {
@@ -42,64 +40,50 @@ body {
     margin-right: 10px;
 }
 
-.header_menu {
-    display: flex;
-    align-items: center;
-}
-
 .header_menu a {
     text-decoration: none;
     color: black;
     margin-right: 15px;
     font-size: 15px;
     font-weight: bold;
+
 }
 
-.hamburger {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-}
-
-/* HOME */
 .home_class {
-    background-image: linear-gradient(#004488, #0088FF);
+    background-image:linear-gradient(#004488,#0088FF) ;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px 10%;
+    padding:20px 100px 10px 100px;
+   
+   
 }
-
-.home_content h1 {
+.home_content h1{
     font-size: 2rem;
-}
 
-.home_content p {
+}
+.home_content p{
     padding: 20px;
     font-size: 1rem;
 }
-
-.home_button {
+.home_button{
     background-color: white;
     border: none;
     border-radius: 2px;
-    padding: 10px 40px;
-    font-size: 1.5vw;
-    margin-top: 20px;
 }
 
-.home_button a {
+.home_button a{
     text-decoration: none;
-    color: black;
+    color:black;
+    
 }
-
 .social-icons {
     display: grid;
     grid-template-rows: repeat(5, 50px);
-    margin-top: 50px;
+    margin-top:50px;
     position: absolute;
     left: 0px;
     top: 50%;
@@ -110,26 +94,36 @@ body {
     text-align: center;
     width: 50px;
     height: 50px;
-    background-color: none;
+    background-color:none;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+   
     transition: background-color 0.3s ease;
     text-decoration: none;
     border: 1px solid white;
 }
 
-/* ABOUT */
+
+.home_button {
+    padding: 10px 40px;
+    font-size: 1.5vw;
+    margin-top: 20px;
+}
+
 .about {
-    background-color: rgba(232, 221, 221, 0.347);
-    padding: 80px 20px;
+    background-color:  rgba(232, 221, 221, 0.347);
+    padding: 80px 10px;
 }
 
 .about_content {
     text-align: center;
     margin-bottom: 40px;
+    
 }
+
+
 
 .about_content h2 {
     font-size: 2rem;
@@ -145,23 +139,21 @@ body {
 
 .about_info {
     width: 80%;
-    margin: 0 auto;
+    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    height: auto;
+    justify-content: space-around;
+    height: 70vh;
 }
 
-.about_a,
-.about_b {
+
+.about_a, .about_b {
     flex-basis: 45%;
     margin-bottom: 30px;
 }
 
-.about_a h3,
-.about_b h3 {
-    font-size: 1.5rem;
+.about_a h3, .about_b h3 {
+    font-size:1.5rem;
     margin-bottom: 10px;
 }
 
@@ -181,18 +173,10 @@ body {
     border: none;
 }
 
-.contact_button {
-    background-color: rgb(51, 135, 195);
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: none;
-}
-
-/* PROJECT */
 .project {
     padding: 150px 20px;
+    
+    
 }
 
 .project_h h1 {
@@ -210,33 +194,30 @@ body {
 .project_c {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-bottom: 50px;
+    justify-content: space-around;
     align-items: center;
-    padding: 40px;
+    padding: 40PX;  
 }
 
-.project_c_i,
-.project_c_p {
+.project_c_i, .project_c_p {
     flex-basis: 45%;
     text-align: center;
 }
-
-.project_c_i img {
-    width: 250px;
-    height: 250px;
+.project_c_i img{
+    width:250px;
+    height:250px ;
 }
 
 .project_c_p {
-    text-align: left;
-    padding: 10px;
+    text-align: left; 
+    padding:10px;
 }
-
-.project_c_p h1 {
+.project_c_p  h1{
     font-size: 1.5rem;
     padding: 10px;
 }
-
-.project_c_p p {
+.project_c_p p{
     padding: 10px;
     font-size: 1rem;
 }
@@ -250,12 +231,12 @@ body {
     font-weight: bold;
     cursor: pointer;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 10px; 
 }
 
-/* CONTACT */
+
 .contact {
-    background: linear-gradient(#004488, #0088FF);
+    background: linear-gradient(#004488,#0088FF);
     padding: 100px 20px;
 }
 
@@ -263,21 +244,22 @@ body {
     text-align: center;
     margin-bottom: 30px;
 }
-
-.contact_d h2 {
+.contact_d h2{
     font-size: 2rem;
     padding: 10px;
     color: white;
     margin: 50px;
 }
 
-.contact_d p {
+.contact_d p{
     font-size: 1rem;
     padding: 15px;
     color: white;
+
 }
 
 .contact_f {
+  
     display: flex;
     justify-content: center;
 }
@@ -290,8 +272,7 @@ body {
     max-width: 500px;
 }
 
-.contact_f input,
-.contact_f textarea {
+.contact_f input, .contact_f textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -301,7 +282,7 @@ body {
 }
 
 .contact_f_bu {
-    width: 25%;
+    width: 25%; 
     padding: 15px;
     background-color: rgb(51, 135, 195);
     color: white;
@@ -309,11 +290,11 @@ body {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    text-align: center;
-    float: right;
+    text-align: center; 
+    float: right; 
 }
 
-/* FOOTER */
+
 .footercls {
     display: flex;
     background-color: black;
@@ -321,8 +302,7 @@ body {
     padding: 50px;
 }
 
-.footercls_le,
-.footercls_rg {
+.footercls_le, .footercls_rg {
     flex-basis: 45%;
     margin-bottom: 20px;
 }
@@ -335,19 +315,19 @@ body {
 .footercls_le p {
     font-size: 1rem;
 }
-
-.footercls_rg {
+.footercls_rg{
     margin-left: 100px;
+    
 }
-
 .footercls_rg h4 {
     font-size: 1.4rem;
 }
 
 .footercls_rg i {
-    font-size: 1.4rem;
+    font-size:1.4rem;
     margin-right: 10px;
     padding-top: 10px;
+    
 }
 
 .sum {
@@ -356,51 +336,130 @@ body {
     color: white;
     padding: 20px;
 }
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+.project_one{
+    display: block;
+    margin: 30px;
+}
+.project_one{
+    margin: 70px;
+}
+.project_one_c_p h1{
+    padding:20px ;
+}
+.project_one_c_p p{
+    padding:20px ;
+}
 
-/* MOBILE / TABLET LAYOUT */
-@media (max-width: 768px) {
-    .home_class {
-        padding: 20px 5%;
+.project_one_c_i img{
+    display: block;
+    margin: auto;
+}
+.tools h3{
+    padding:20px;
+}
+.tools_used{
+    padding:20px ;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+.tool_button_1{
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+.pro_button button{
+    padding: 15px;
+    margin: 20px 20px 0px 0px;
+    text-align: center;
+    background-color: rgb(51, 135, 195);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.pro_button{
+    margin: 20px;
+}
+/* Media Queries */
+@media (max-width: 576px) {
+    .header_name, .header_menu a {
+        font-size: 1rem;
+    }
+    
+   .header_menu a{
+      display: NONE;
+
+   }
+    .home_button {
+        font-size: 1rem;
     }
 
-    .header_menu a {
-        margin-right: 10px;
+    .about_content h2, .project_h h1 {
+        font-size: 2rem;
+
     }
 
-    .about_info {
-        display: block;
-        margin: 20px;
+    .about_content p, .project_h p {
+        font-size:1rem;
     }
 
-    .about_a,
-    .about_b {
-        flex-basis: 100%;
+    .about_button_1 {
+        font-size:1rem;
     }
-
+    .about_info{
+        display:block;
+        margin: 10px;
+    }
+    .about_a h1{
+        font-size: 1.5rem;
+    }
+    .project{
+        text-align: center;
+    }
+    
+    
     .project_c {
         flex-direction: column;
+        align-items: center;
     }
 
-    .project_c_i,
-    .project_c_p {
+    .project_c_i, .project_c_p {
         flex-basis: 100%;
         text-align: center;
     }
-
-    .contact_f_bu {
-        width: 100%;
+    .contact_f_bu{
+        width:100%;
     }
-
-    .footercls {
-        flex-direction: column;
-        text-align: center;
+    .footercls{
+        display:flex;
+        flex-direction: column-reverse;
     }
-
-    .footercls_rg {
-        margin-left: 0;
+    .footercls_rg{
+        margin-left: 5px;
     }
-
     .hamburger {
         display: block;
         padding: 20px;
-        cursor:
+    }
+    .pro_button{
+        display: block;
+    }
+}
+@media (max-width: 576px){
+    .about_info{
+        display:block;
+        margin: 10px;
+        position: relative;
+        left: 230px;
+    }
+    
+}
