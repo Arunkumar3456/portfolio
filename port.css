@@ -1,4 +1,580 @@
+/* Base reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Parent container styling */
+.parent {
+    width: 100%;
+}
+
+/* Header styling */
+.header {
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(241, 246, 244);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header_name {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.header_name_logo {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Home section styling */
+.home_class {
+    background-image: linear-gradient(#004488, #0088FF);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.home_content h1 {
+    font-size: 2.5rem;
+}
+
+.home_content p {
+    max-width: 800px;
+    line-height: 1.8;
+    margin: 20px auto;
+    font-size: 1.1rem;
+}
+
+.home_button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.home_button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-icons a {
+    color: white;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f2f2f2;
+}
+
+/* About section styling */
+.about {
+    background-color: rgba(232, 221, 221, 0.347);
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.about_content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about_content p {
+    max-width: 800px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: auto;
+    font-size: 1rem;
+}
+
+.about_info {
+    margin-top: 40px;
+}
+
+.about_info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about_button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.about_button_1 {
+    border: none;
+    background-color: #0088FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Project section styling */
+.project {
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.project_h h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project_h p {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.project_c {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.project_c_i img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.project_c_p {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.project_c_p h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project_c_p p {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.project_c_p button {
+    padding: 10px 20px;
+    background-color: #004488;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Contact section styling */
+.contact {
+    background: linear-gradient(#004488, #0088FF);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.contact_d h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact_d p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contact_f form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact_f input,
+.contact_f textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact_f_bu {
+    width: 100%;
+    padding: 10px;
+    background-color: #004488;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer styling */
+.footercls {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footercls_le, .footercls_rg {
+    margin-bottom: 20px;
+}
+
+.footercls_le h4, .footercls_rg h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footercls_le p {
+    font-size: 1rem;
+}
+
+.footercls_rg i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+.sum {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header_menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .about_button {
+        flex-direction: column;
+    }
+
+    .project_c {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footercls {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .home_content h1 {
+        font-size: 2rem;
+    }
+
+    .about_content h2, .project_h h1, .contact_d h2 {
+        font-size: 1.8rem;
+    }
+
+    .project_c_p, .about_content p {
+        text-align: center;
+    }
+
+    .social-icons {
+        left: 10px;
+    }
+}
+
+
+
 /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container */
+.parent {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header_name {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.header_name_logo {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header_menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header_menu a {
+    color: #fff;
+    font-size: 1em;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home_class {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.home_content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.home_content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.home_button a {
+    padding: 10px 20px;
+    background-color: #3399ff;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Project Section */
+.project_one {
+    padding: 50px 20px;
+}
+
+.project_one_c {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project_one_c_i img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project_one_c_p {
+    flex: 1;
+}
+
+.project_one_c_p h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.tools {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.tools h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.tools_used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tool_button_1 {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pro_button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pro_button a button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3399ff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footercls {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footercls_le h4,
+.footercls_rg h4 {
+    margin-bottom: 10px;
+}
+
+.footercls_rg i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.sum {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header_menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .project_one_c {
+        flex-direction: column;
+    }
+    .project_one_c_p {
+        text-align: center;
+    }
+    .footercls {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home_content h1 {
+        font-size: 2em;
+    }
+    .tools_used {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .pro_button a button {
+        padding: 8px 15px;
+    }
+}
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +590,7 @@ body {
     padding: 20px;
 }
 
+/* Anchor Links */
 a {
     text-decoration: none;
     color: inherit;
@@ -55,6 +632,7 @@ a {
 
 .header_menu a {
     color: #fff;
+    font-size: 1em;
     transition: color 0.3s;
 }
 
@@ -93,6 +671,7 @@ a {
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
     transition: background-color 0.3s;
 }
 
@@ -147,6 +726,7 @@ a {
 
 .tool_button_1 {
     padding: 8px 12px;
+    border: none;
     background-color: #f1f1f1;
     border-radius: 5px;
     cursor: pointer;
@@ -164,9 +744,11 @@ a {
 
 .pro_button a button {
     padding: 10px 20px;
+    border: none;
     background-color: #1e90ff;
     color: #fff;
     border-radius: 5px;
+    margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -182,19 +764,18 @@ a {
     background-color: #282828;
     color: #fff;
     padding: 20px;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
-.footercls h4 {
+.footercls_le h4,
+.footercls_rg h4 {
     margin-bottom: 10px;
 }
 
 .footercls_rg i {
     font-size: 1.5em;
     margin-right: 10px;
-    cursor: pointer;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 .footercls_rg i:hover {
@@ -202,6 +783,7 @@ a {
 }
 
 .sum {
+    text-align: center;
     margin-top: 20px;
     color: #777;
 }
@@ -217,8 +799,12 @@ a {
     .project_one_c {
         flex-direction: column;
     }
+    .project_one_c_p {
+        text-align: center;
+    }
     .footercls {
         flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -234,3 +820,4 @@ a {
         padding: 8px 15px;
     }
 }
+
