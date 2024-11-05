@@ -26,6 +26,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 0 20px;
 }
 
 .header_name {
@@ -402,8 +403,4 @@ body {
     .hamburger {
         display: block;
         padding: 20px;
-        cursor: pointer;
-    }
-
-    .header_menu {
-       
+        cursor:
