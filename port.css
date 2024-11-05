@@ -405,8 +405,5 @@ body {
         cursor: pointer;
     }
 
-    /* Navigation for small screens */
-    .header_menu.active a {
-        display: block;
-        margin-bottom: 10px;
-        text-align: center
+    .header_menu {
+       
