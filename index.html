@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Media</title>
 </head>
+
 <body>
     <div class="parent">
         <!-- Header Section -->
@@ -20,7 +22,7 @@
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
-                <div class="hamburger">
+                <div class="hamburger" aria-label="Navigation Menu" onclick="toggleMenu()">
                     &#9776;
                 </div>
             </nav>
@@ -85,8 +87,7 @@
             <div class="project_h">
                 <h1>PROJECTS</h1>
                 <p>• “Artificial Intelligence Tool for Churn Prediction Model and Customer Segmentation Using Unsupervised Learning”<br>
-                   • “Embedded-Based Auto Cart and Android IoT App for Social Distancing Shopping”
-                </p>
+                   • “Embedded-Based Auto Cart and Android IoT App for Social Distancing Shopping”</p>
             </div>
             <div class="project_c">
                 <div class="project_c_i">
@@ -155,5 +156,14 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // Toggle navigation menu for mobile view
+        function toggleMenu() {
+            const navMenu = document.querySelector('.header_menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
+
 </html>
